@@ -1,6 +1,6 @@
 # stringify-changelog [![NPM version](https://badge.fury.io/js/stringify-changelog.svg)](http://badge.fury.io/js/stringify-changelog)  [![Build Status](https://travis-ci.org/jonschlinkert/stringify-changelog.svg)](https://travis-ci.org/jonschlinkert/stringify-changelog) 
 
-> Generate a markdown-formatted changelog from an object or yaml file.
+> Generate a markdown-formatted changelog from an object, array or yaml file.
 
 
 Converts valid YAML, like this:

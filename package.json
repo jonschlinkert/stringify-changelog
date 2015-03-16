@@ -1,6 +1,6 @@
 {
   "name": "stringify-changelog",
-  "description": "Generate a markdown-formatted changelog from an object or yaml file.",
+  "description": "Generate a markdown-formatted changelog from an object, array or yaml file.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/stringify-changelog",
   "author": {
