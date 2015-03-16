@@ -1,0 +1,41 @@
+{
+  "name": "stringify-changelog",
+  "description": "Generate a markdown-formatted changelog from an object or yaml file.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/stringify-changelog",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/stringify-changelog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/stringify-changelog/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/stringify-changelog/blob/master/LICENSE"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "columnify": "^1.4.1",
+    "js-yaml": "^3.2.7",
+    "mixin-deep": "^1.0.1",
+    "moment": "^2.9.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  }
+}
