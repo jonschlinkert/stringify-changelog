@@ -8,7 +8,7 @@
 'use strict';
 
 var fs = require('fs');
-var yaml = require('js-yaml');
+var yaml = require('js-yaml-lite');
 var moment = require('moment');
 var columnify = require('columnify');
 var merge = require('mixin-deep');
