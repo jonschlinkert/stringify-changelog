@@ -1,0 +1,22 @@
+v0.4.41:
+  date: "2014-07-07"
+  notes:
+    - arbitrary notes.
+  added:
+    - for new features.
+  changed:
+    - for changes in existing functionality.
+  deprecated:
+    - for once-stable features removed in upcoming releases.
+  removed:
+    - for deprecated features removed in this release.
+  fixed:
+    - for any bug fixes.
+  security:
+    - to invite users to upgrade in case of vulnerabilities.
+v0.4.38:
+  date: "2014-06-13"
+  changed:
+    - Use gray-matter instead of assemble-yaml.
+    - Updates dependencies. Minor refactoring and new utils to get rid of a couple of dependencies.
+    - Update the loaders for plugins and helpers to use resolve-dep. Should be more reliable now.

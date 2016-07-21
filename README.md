@@ -7,15 +7,18 @@ Converts valid YAML, like this:
 ```yaml
 v0.1.0:
   date: "2016-12-26"
-  changes:
+  changed:
     - Got stuck in another chimney.
 ```
 
 Into this:
 
 ```markdown
-**DATE**       **VERSION**   **CHANGES**                  
-* 2016-12-26   v0.1.0        Got stuck in another chimney.
+### [v0.1.0] - 2016-12-26
+
+**changes**
+
+- Got stuck in another chimney.
 ```
 
 ## Install
@@ -44,14 +47,67 @@ See [columnify](https://github.com/timoxley/columnify) for additional options.
 
 ## Data format
 
+Conventions from [keep-a-changelog][] are supported by default. When data is passed as an object or array (from a file or directly), changelog entries can be categorized using the following labels as property names:
+
+* `added` for new features.
+* `changed` for changes in existing functionality.
+* `deprecated` for once-stable features removed in upcoming releases.
+* `removed` for deprecated features removed in this release.
+* `fixed` for any bug fixes.
+* `security` to invite users to upgrade in case of vulnerabilities.
+
+### Examples
+
 Data can either be formatted as an array or an object.
+
+**Object**
+
+JSON
+
+```js
+{ 'v0.1.0':
+   { date: '2016-12-26',
+     changed: [ 'Got stuck in another chimney.' ] } }
+```
+
+YAML
+
+```yaml
+v0.1.0:
+  date: "2016-12-26"
+  changed:
+    - Got stuck in another chimney.
+```
+
+**Array**
+
+JSON
+
+```js
+[ { date: '2016-12-26',
+    version: 'v0.1.0',
+    changed: [ 'Got stuck in another chimney.' ] } ]
+```
+
+YAML
+
+```yaml
+- version: v0.1.0
+  date: '2016-12-26'
+  changed:
+    - Got stuck in another chimney.
+```
+
+### Arbitrary entries
+
+If you don't want to follow keep-a-changelog format, or you have an arbitrary entry that doesn't fit in one of the above categories, you can use the `description` property.
 
 **Array**
 
 ```js
 [ { date: '2016-12-26',
     version: 'v0.1.0',
-    changes: [ 'Got stuck in another chimney.' ] } ]
+    description: [ 'Got stuck in another chimney.' ] } ]
 ```
 
 **Object**
@@ -59,7 +115,7 @@ Data can either be formatted as an array or an object.
 ```js
 { 'v0.1.0':
    { date: '2016-12-26',
-     changes: [ 'Got stuck in another chimney.' ] } }
+     description: [ 'Got stuck in another chimney.' ] } }
 ```
 
 ## About
