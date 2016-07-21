@@ -1,6 +1,6 @@
-# stringify-changelog [![NPM version](https://img.shields.io/npm/v/stringify-changelog.svg?style=flat)](https://www.npmjs.com/package/stringify-changelog) [![Build Status](https://img.shields.io/travis/jonschlinkert/stringify-changelog.svg?style=flat)](https://travis-ci.org/jonschlinkert/stringify-changelog)
+# stringify-changelog [![NPM version](https://img.shields.io/npm/v/stringify-changelog.svg?style=flat)](https://www.npmjs.com/package/stringify-changelog) [![NPM downloads](https://img.shields.io/npm/dm/stringify-changelog.svg?style=flat)](https://npmjs.org/package/stringify-changelog) [![Build Status](https://img.shields.io/travis/jonschlinkert/stringify-changelog.svg?style=flat)](https://travis-ci.org/jonschlinkert/stringify-changelog)
 
-> Generate a markdown-formatted changelog from an object, array or yaml file.
+Generate a markdown-formatted changelog from an object, array or yaml file.
 
 Converts valid YAML, like this:
 
@@ -62,11 +62,17 @@ Data can either be formatted as an array or an object.
      changes: [ 'Got stuck in another chimney.' ] } }
 ```
 
-## Related projects
+## About
+
+### Related projects
 
 [helper-changelog](https://www.npmjs.com/package/helper-changelog): Template helper for generating a markdown-formatted changelog from an object, array or yaml file. | [homepage](https://github.com/jonschlinkert/helper-changelog "Template helper for generating a markdown-formatted changelog from an object, array or yaml file.")
 
-## Running tests
+### Contributing
+
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](../../issues/new).
+
+### Running tests
 
 Install dev dependencies:
 
@@ -74,18 +80,14 @@ Install dev dependencies:
 $ npm install -d && npm test
 ```
 
-## Contributing
-
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](../../issues/new).
-
-## Author
+### Author
 
 **Jon Schlinkert**
 
 * [github/jonschlinkert](https://github.com/jonschlinkert)
 * [twitter/jonschlinkert](http://twitter.com/jonschlinkert)
 
-## License
+### License
 
 Copyright © 2016, [Jon Schlinkert](https://github.com/jonschlinkert).
 Released under the [MIT license](https://github.com/jonschlinkert/stringify-changelog/blob/master/LICENSE).

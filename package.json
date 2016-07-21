@@ -43,7 +43,7 @@
       ]
     },
     "toc": false,
-    "layout": "nil",
+    "layout": "common-minimal",
     "tasks": [
       "readme"
     ],
@@ -52,6 +52,10 @@
     ],
     "lint": {
       "reflinks": true
-    }
+    },
+    "reflinks": [
+      "verb",
+      "verb-generate-readme"
+    ]
   }
 }
