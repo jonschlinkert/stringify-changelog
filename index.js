@@ -82,7 +82,7 @@ function formatDate(date, opts) {
 
 function readChangelog(filepath) {
   var ext = path.extname(filepath);
-  if (ext === '.yaml' || ext === '.yml') {
+  if (ext === '.yaml' || ext === '.yml' || ext === '') {
     try {
       var str = fs.readFileSync(filepath, 'utf8');
       return yaml.load(str);
