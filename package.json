@@ -3,20 +3,16 @@
   "description": "Generate a markdown-formatted changelog from an object, array or yaml file.",
   "version": "0.1.2",
   "homepage": "https://github.com/jonschlinkert/stringify-changelog",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/stringify-changelog.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/stringify-changelog",
   "bugs": {
     "url": "https://github.com/jonschlinkert/stringify-changelog/issues"
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "LICENSE",
+    "README.md"
   ],
   "main": "index.js",
   "engines": {
@@ -35,14 +31,15 @@
     "mocha": "*",
     "should": "*"
   },
+  "keywords": [
+    "changelog",
+    "stringify"
+  ],
   "verb": {
     "related": {
       "list": [
         "helper-changelog"
       ]
     }
-  },
-  "keywords": [
-    "changelog"
-  ]
+  }
 }
