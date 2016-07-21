@@ -15,7 +15,21 @@ var changelog = require('./');
 
 describe('changelog', function () {
   it('should generate a changelog from a yaml file:', function () {
+    changelog('fixtures/a.yaml').should.equal([
+      '**DATE**       **VERSION**   **CHANGES**                  ',
+      '* 2016-12-26   v0.1.0        Got stuck in another chimney.',
+    ].join('\n'));
+  });
+
+  it('should generate a changelog from a yml file:', function () {
     changelog('fixtures/a.yml').should.equal([
+      '**DATE**       **VERSION**   **CHANGES**                  ',
+      '* 2016-12-26   v0.1.0        Got stuck in another chimney.',
+    ].join('\n'));
+  });
+
+  it('should generate a changelog from a yaml file with no extension:', function () {
+    changelog('fixtures/changelog').should.equal([
       '**DATE**       **VERSION**   **CHANGES**                  ',
       '* 2016-12-26   v0.1.0        Got stuck in another chimney.',
     ].join('\n'));
