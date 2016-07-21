@@ -8,6 +8,7 @@
 'use strict';
 
 require('mocha');
+var path = require('path');
 var assert = require('assert');
 var moment = require('moment');
 var changelog = require('./');
@@ -78,7 +79,7 @@ describe('changelog', function() {
   });
 
   it('should generate a changelog from a yaml file with no extension:', function() {
-    assert.equal(changelog('fixtures/changelog'), [
+    assert.equal(changelog(path.resolve(__dirname, 'fixtures/changelog')), [
       '## [v0.2.0] - 2016-12-26',
       '',
       '**changes**',
