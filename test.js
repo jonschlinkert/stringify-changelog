@@ -59,6 +59,6 @@ describe('changelog', function () {
   it('should throw an error:', function () {
     (function () {
       changelog();
-    }).should.throw('helper-changelog cannot find data or a file to read.');
+    }).should.throw('stringify-changelog expects an object or array');
   });
 });

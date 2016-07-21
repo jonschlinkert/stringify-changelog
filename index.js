@@ -8,22 +8,25 @@
 'use strict';
 
 var fs = require('fs');
+var path = require('path');
 var yaml = require('js-yaml-lite');
 var moment = require('moment');
 var columnify = require('columnify');
 var merge = require('mixin-deep');
 
 module.exports = function changelog(data, opts) {
+  var filepath;
   if (typeof data === 'string') {
+    filepath = data;
     data = readChangelog(data);
   }
 
-  if (!data) {
-    throw new Error('helper-changelog cannot find data or a file to read.');
+  if (filepath && !data) {
+    throw new Error(`stringify-changelog cannot read <${filepath}>`);
   }
 
-  if (typeof data !== 'object') {
-    throw new Error('helper-changelog expects data to be an array or object.');
+  if (!data || typeof data !== 'object') {
+    throw new TypeError('stringify-changelog expects an object or array');
   }
 
   var changes = [];
@@ -77,10 +80,19 @@ function formatDate(date, opts) {
   return ' * ' + moment(date).format('YYYY-MM-DD');
 }
 
-function readChangelog(fp) {
-  try {
-    var str = fs.readFileSync(fp, 'utf8');
-    return yaml.load(str);
-  } catch (err) {}
+function readChangelog(filepath) {
+  var ext = path.extname(filepath);
+  if (ext === '.yaml' || ext === '.yml') {
+    try {
+      var str = fs.readFileSync(filepath, 'utf8');
+      return yaml.load(str);
+    } catch (err) {}
+  }
+  if (ext === '.json') {
+    try {
+      var str = fs.readFileSync(filepath, 'utf8');
+      return JSON.parse(str);
+    } catch (err) {}
+  }
   return null;
 }
