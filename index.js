@@ -42,7 +42,6 @@ module.exports = function changelog(data, opts) {
     // Convert changelog object to an array. We want the
     // version key to convert to `version: "v0.1.0"`
     for (var version in data) {
-
       changes.push({
         date: formatDate(data[version].date, opts),
         version: version,
@@ -50,10 +49,6 @@ module.exports = function changelog(data, opts) {
       });
     }
   }
-
-  // free up memory
-  data = null;
-  opts = opts || {};
 
   opts = merge({}, opts, {
     columnSplitter: '   ',
