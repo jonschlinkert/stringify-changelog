@@ -33,8 +33,16 @@ module.exports = function changelog(val, options) {
       changes.push(entry);
     }
   } else if (val && typeof val === 'string') {
-    var links = createReflinks(val, options);
-    return val + '\n\n' + links;
+    var opts = extend({}, options);
+    var links = createReflinks(val, opts);
+    var result = val + '\n\n' + links;
+    if (opts.stripHeading) {
+      result = stripHeading(result);
+    }
+    if (opts.key) {
+      result = addKey(result);
+    }
+    return result;
   } else if (!Array.isArray(val)) {
     throw new TypeError('stringify-changelog expects an object or array');
   } else {
@@ -147,6 +155,11 @@ function addKey(str) {
     ''
   ].join('\n');
   return key + str;
+}
+
+function stripHeading(str) {
+  str = str.replace(/^\s+/, '');
+  return str.replace(/^#[^\n]+/, '');
 }
 
 function getRepo(options) {
