@@ -14,9 +14,9 @@ v0.1.0:
 Into this:
 
 ```markdown
-### [v0.1.0] - 2016-12-26
+## [v0.1.0] - 2016-12-26
 
-**changes**
+### Changed
 
 - Got stuck in another chimney.
 ```

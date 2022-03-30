@@ -80,7 +80,7 @@ function formatEntry(entry, options) {
   var str = `## [${entry.version}] - ${entry.date}`;
   for (var key in entry) {
     if (entry.hasOwnProperty(key) && key !== 'date' && key !== 'version') {
-      str += `\n\n**${key}**\n\n`;
+      str += `\n\n### ${key}\n\n`;
       str += formatList(entry[key]);
     }
   }
