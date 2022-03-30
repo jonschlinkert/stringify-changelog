@@ -18,13 +18,13 @@ describe('changelog', function() {
     assert.equal(changelog('fixtures/a.yaml'), [
       '## [v0.2.0] - 2016-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in another chimney.',
       '',
       '## [v0.1.0] - 2015-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in a chimney last night.',
       ''
@@ -35,13 +35,13 @@ describe('changelog', function() {
     assert.equal(changelog('fixtures/a.yaml', {repo: 'foo/bar'}), [
       '## [v0.2.0] - 2016-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in another chimney.',
       '',
       '## [v0.1.0] - 2015-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in a chimney last night.',
       '',
@@ -53,13 +53,13 @@ describe('changelog', function() {
     assert.equal(changelog('fixtures/a.yaml', {owner: 'foo', name: 'bar'}), [
       '## [v0.2.0] - 2016-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in another chimney.',
       '',
       '## [v0.1.0] - 2015-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in a chimney last night.',
       '',
@@ -71,7 +71,7 @@ describe('changelog', function() {
     assert.equal(changelog('fixtures/a.yml'), [
       '## [v0.1.0] - 2015-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in a chimney last night.',
       ''
@@ -82,7 +82,7 @@ describe('changelog', function() {
     assert.equal(changelog(path.resolve(__dirname, 'fixtures/changelog')), [
       '## [v0.2.0] - 2016-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in another chimney.',
       ''
@@ -94,7 +94,7 @@ describe('changelog', function() {
     assert.equal(changelog(data), [
       '## [v0.2.0] - 2016-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in another chimney.',
       ''
@@ -109,7 +109,7 @@ describe('changelog', function() {
     assert.equal(changelog(data), [
       '## [v0.2.0] - 2016-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in another chimney.',
       ''
@@ -129,7 +129,7 @@ describe('changelog', function() {
     assert.equal(changelog(data, opts), [
       '## [v0.2.0] - 2016-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in another chimney.',
       ''
@@ -152,13 +152,13 @@ describe('changelog', function() {
       '',
       '## [v0.2.0] - 2016-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in another chimney.',
       '',
       '## [v0.1.0] - 2015-12-26',
       '',
-      '**changes**',
+      '### changes',
       '',
       '- Got stuck in a chimney last night.',
       '',

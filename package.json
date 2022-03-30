@@ -1,7 +1,7 @@
 {
   "name": "stringify-changelog",
   "description": "Generate a markdown-formatted changelog from an object, array, yaml or json file.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/jonschlinkert/stringify-changelog",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/stringify-changelog",
@@ -22,14 +22,14 @@
     "test": "mocha"
   },
   "dependencies": {
-    "extend-shallow": "^2.0.1",
-    "isobject": "^2.1.0",
+    "extend-shallow": "^3.0.2",
+    "isobject": "^4.0.0",
     "js-yaml-lite": "^0.1.1",
-    "moment": "^2.14.1"
+    "moment": "^2.29.1"
   },
   "devDependencies": {
-    "gulp-format-md": "^0.1.9",
-    "mocha": "^2.5.3"
+    "gulp-format-md": "^2.0.0",
+    "mocha": "^9.2.2"
   },
   "keywords": [
     "changelog",
